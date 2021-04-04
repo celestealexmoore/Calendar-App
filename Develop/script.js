@@ -35,13 +35,18 @@ function setItemEvent(event) {
 
 // Function that gets and displays input from LocalStorage.
 function storeEvent(event) {
-    var hourId = $(this).siblings("input").attr("id");
-    
-    localStorage.getItem(hourId);
-    $(this).siblings("input[type='text']").val();
+    for (var i = 9; i < 18; i++){
+        /* Created variable i, starting at 9am until 1700 (military time) If i is less than 17, add 1 and go until 17. 
+        This creates a way for me to get the value stored in the individual ids.*/
 
+        // using corresponding key in the localStorage for the input id.
+        console.log(localStorage.getItem(i));
+        console.log($(`#${i}`))
+        /*the template literal (backtick) allows you to put javascript directly inside of a string.*/
+        $(`#${i}`).val(localStorage.getItem(i))
+    }
 }
-
+storeEvent()
 // timeblocks.val(localStorage.setItem());
 
 // $(".hour").val(localStorage.getItem(""));
