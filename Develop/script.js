@@ -21,8 +21,7 @@ var saveBtns = $(".saveBtn")
 
 saveBtns.each(function(index, el){
     el.addEventListener("click", function(toDoEvent){
-        console.log("you submitted")
-        console.log($(this));
+        console.log("you submitted", $(this))
 });
     
 function toDoEvent(event) {
