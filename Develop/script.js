@@ -21,13 +21,17 @@ var saveBtns = $(".saveBtn")
 
 saveBtns.each(function(index, el){
     el.addEventListener("click", function(event){
-        console.log("you clicked on...")
-        console.log(event.target)
-    
-        var btnNum = event.target(".saveBtns").dataset.num;
-        btnNum.addEventListener("click", setLocalStorage);
+        console.log("you submitted")
+        console.log($(this));
+    });
 
-    })
+    timeblocks.dataset.val(localStorage.setItem());
+    // saveBtns.dataset.
+    
+    // event.target.dataset.num
+    
+$(".saveBtns").on("click", toDoEvent);
+
 })
 
 
