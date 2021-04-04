@@ -13,9 +13,8 @@ timeblocks.each(function(index, el){
     } else if (currentHour < el.id){
         $(this).addClass("future")
     } else {
-   $(this).addClass("present")
-    };
-
+   $(this).addClass("present")}
+})
 
 var myButton = document.getElementById("#saveBtn")
 
@@ -31,4 +30,3 @@ $(".hour").val(localStorage.getItem(""));
 
 /* Need to insert the text area value and the time label
 save_button.addEventListener("click", setLocalStorage); */
-})
