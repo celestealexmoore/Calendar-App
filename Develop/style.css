@@ -1,18 +1,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 1;
   background-image: linear-gradient(250deg,rgb(245, 245, 90), pink, orange);
-  margin-bottom: 30px;
-}
-
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  color: teal;
-  border-left: 1px solid black;
-  padding: 10px;
+  margin-bottom: 100px;
 }
 
 .jumbotron {
@@ -21,17 +11,15 @@ textarea {
   border-radius: 0;
   border-bottom: 5px solid white;
 }
+
 .display-3{
   color:teal;
   background-color:"";
 }
+
 .lead{
   color: teal;
   background-color: "";
-}
-
-.description {
-  white-space: pre-wrap;
 }
 
 .time-block {
@@ -42,8 +30,8 @@ textarea {
 .row {
   white-space: pre-wrap;
   height: 50px;
-  border-top: 50px solid "";
-  border-bottom: 50px solid "";
+  border-top: 15px solid "";
+  border-bottom: 15px solid "";
   margin-bottom: 5px;
 }
 
@@ -51,20 +39,22 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed teal;
+  border-left: 1.5px solid teal;
+  margin-left: 5px;
 }
 
 .past {
-  background-color: #d3d3d3;
+  background-color: #646464;
   color:black;
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #ffffff;
   color: black;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #d3d3d3;
   color: black;
 }
 
@@ -83,8 +73,25 @@ background: rgb(0, 0, 0);
 color: white;
 font-size: 15px;
 float: right; 
-} */
+} 
 
+textarea {
+  background: white;
+  border: none;
+  resize: none;
+  color: teal;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+*/
+
+/*
 .saveBtn i:hover {
   transition: all 0.3s ease-in-out;
 }
+*/

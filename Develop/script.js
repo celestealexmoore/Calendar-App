@@ -20,22 +20,22 @@ timeblocks.each(function(index, el){
 var saveBtns = $(".saveBtn")
 
 saveBtns.each(function(index, el){
-    el.addEventListener("click", function(event){
+    el.addEventListener("click", function(toDoEvent){
         console.log("you submitted")
         console.log($(this));
-    });
+});
+    
+function toDoEvent(event) {
+    var userInput = $(this).siblings("input").val().trim();
+    var hourId = $(this).siblings("input").attr("id");
+ 
+    localStorage.setItem(hourId, userInput);
 
-    timeblocks.dataset.val(localStorage.setItem());
-    // saveBtns.dataset.
-    
-    // event.target.dataset.num
-    
+}; 
+
 $(".saveBtns").on("click", toDoEvent);
 
-})
-
-
-
+});
 // timeblocks.val(localStorage.setItem());
 
 // $(".hour").val(localStorage.getItem(""));
