@@ -16,17 +16,26 @@ timeblocks.each(function(index, el){
    $(this).addClass("present")}
 })
 
-var myButton = document.getElementById("#saveBtn")
+// save button function
+var saveBtns = $(".saveBtn")
 
-myButton.addEventListener("click", saveStuff);
-function saveStuff(event){
-    console.log("You clicked the save button.");
+saveBtns.each(function(index, el){
+    el.addEventListener("click", function(event){
+        console.log("you clicked on...")
+        console.log(event.target)
+    
+        var btnNum = event.target(".saveBtns").dataset.num;
+        btnNum.addEventListener("click", setLocalStorage);
+
+    })
+})
 
 
-$(".hour").val(localStorage.setItem());
 
-$(".hour").val(localStorage.getItem(""));
-}
+// timeblocks.val(localStorage.setItem());
+
+// $(".hour").val(localStorage.getItem(""));
+
 
 /* Need to insert the text area value and the time label
-save_button.addEventListener("click", setLocalStorage); */
+ */
