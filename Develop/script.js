@@ -20,21 +20,28 @@ timeblocks.each(function(index, el){
 var saveBtns = $(".saveBtn")
 
 saveBtns.each(function(index, el){
-    el.addEventListener("click", function(toDoEvent){
-        console.log("you submitted", $(this))
+    el.addEventListener("click", setItemEvent)
 });
-    
-function toDoEvent(event) {
-    var userInput = $(this).siblings("input").val().trim();
+
+// console.log("you submitted", userInput, hourId); <= Not sure how to code this properly.
+
+// Function that stores the input to the localStorage.
+function setItemEvent(event) {
+    var userInput = $(this).siblings("input").val();
     var hourId = $(this).siblings("input").attr("id");
  
     localStorage.setItem(hourId, userInput);
-
 }; 
 
-$(".saveBtns").on("click", toDoEvent);
+// Function that gets and displays input from LocalStorage.
+function storeEvent(event) {
+    var hourId = $(this).siblings("input").attr("id");
+    
+    localStorage.getItem(hourId);
+    $(this).siblings("input[type='text']").val();
 
-});
+}
+
 // timeblocks.val(localStorage.setItem());
 
 // $(".hour").val(localStorage.getItem(""));
